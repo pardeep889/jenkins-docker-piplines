@@ -1,0 +1,25 @@
+{
+  "name": "jenkins-docker-piplines",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./script/test || exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pardeep889/jenkins-docker-piplines.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pardeep889/jenkins-docker-piplines/issues"
+  },
+  "homepage": "https://github.com/pardeep889/jenkins-docker-piplines#readme",
+  "devDependencies": {
+    "mocha": "^6.2.2",
+    "supertest": "^4.0.2"
+  }
+}
