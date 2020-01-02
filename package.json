@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./script/test || exit 1",
-    "start": "node index.js"
+    "start": "pm2 start index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,10 @@
   "homepage": "https://github.com/pardeep889/jenkins-docker-piplines#readme",
   "devDependencies": {
     "mocha": "^6.2.2",
+    "pm2": "^4.2.1",
     "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }

@@ -6,19 +6,17 @@ LABEL maintainer "pardeep889@hotmail.com"
 # Create app directory
 WORKDIR /usr/src/app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY * ./
+COPY . ./
+
+RUN rm -rf node_modules
 
 RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
-RUN npm run test
 
-RUN npm start
 
-# Bundle app source
-COPY . .
+RUN  npm run test
+
+HEALTHCHECK --interval=5s \
+            --timeout=5s \
+            CMD curl -f http://127.0.0.1:8000 || exit 1
 
 EXPOSE 8000
