@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: nodeapp
-      image: pardeep889/pracApp:v2
-      ports: 
+      image: pardeep889/pracApp:haha
+      ports:
         - containerPort: 8080
