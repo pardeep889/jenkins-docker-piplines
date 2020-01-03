@@ -6,6 +6,8 @@ var app = express();
 app.get("/", function (req, res) {
  res.send("hello world").status(200); //return hello world
 });
+
+// I am new thing I should be in the master hahahaha
 //listen to port 8000 by default
 app.listen(process.env.PORT || 8000);
  
