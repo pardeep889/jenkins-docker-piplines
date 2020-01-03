@@ -10,3 +10,4 @@ spec:
       image: pardeep889/pracApp:v2
       ports:
         - containerPort: 8080
+        
