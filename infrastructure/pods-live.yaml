@@ -8,6 +8,5 @@ spec:
   containers:
     - name: nodeapp
       image: pardeep889/pracApp:v2
-      ports:
+      ports: 
         - containerPort: 8080
-        
