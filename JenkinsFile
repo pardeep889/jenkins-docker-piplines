@@ -1,0 +1,16 @@
+node {
+    stage('1. Get Code from repositry'){
+        git branch: 'development', url: 'https://github.com/pardeep889/jenkins-docker-piplines.git'
+    }
+    stage('2.  build docker imag'){
+        sh "git rev-parse --short HEAD > .git/commit-id"                        
+        COMMIT_ID = readFile('.git/commit-id')
+        sh "docker build . -t pardeep889/pracapp -t pardeep889/pracapp:${COMMIT_ID}"
+    }
+     stage('3. Push image') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
+            sh "docker push pardeep889/pracapp:${COMMIT_ID}"
+        } 
+        echo "Trying to Push Docker Build to DockerHub"
+    }
+}
