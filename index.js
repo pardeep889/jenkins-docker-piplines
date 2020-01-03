@@ -9,6 +9,7 @@ app.get("/", function (req, res) {
 
 // I am new thing I should be in the master hahahaha
 //listen to port 8000 by default
-app.listen(process.env.PORT || 8000);
+const port = process.env.PORT || 8000;
+app.listen(port, () => console.log(`App is running on ${port}`));
  
 module.exports = app;
