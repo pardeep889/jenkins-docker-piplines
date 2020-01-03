@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nodeapp
+  name: pracApp
   labels:
-    app: nodeapp
+    app: pracApp
 spec:
   containers:
-    - name: nodeapp
+    - name: pracApp
       image: pardeep889/pracApp:haha
       ports:
         - containerPort: 8080
