@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeapp
+spec:
+  selector:
+    app: nodeapp
+
+  ports:
+    - name: http
+      port: 8000
+      nodePort: 30010
+
+  type: NodePort
